@@ -1,0 +1,40 @@
+<article class="post-card-wrap column medium-6 large-4">
+
+  <div class="post-card {% if post.featured %} post-card--featured {% endif %}">
+
+    {% assign abs_page_url = site.url | append: site.baseurl | append: post.url %}
+
+    <div class="social-section">
+      <a id="share-facebook" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ abs_page_url }}"
+         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="sr-only">Share to Facebook</span>
+      </a>
+      <a id="share-twitter" class="fa fa-twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ abs_page_url }}">
+        <span class="sr-only">Share to Twitter</span>
+       </a>
+    </div>
+
+    <a href="{{ post.prdlink }}" class="block" target="_blank">
+      <div class="post-card__image CoverImage FlexEmbed FlexEmbed--1by1" style="background-image: url({{ post.image | prepend: site.baseurl }})">
+        {% if post.featured %}
+        <span title="Featured Post">
+          <span class="post-card--featured__icon" data-icon="ei-star" data-size="s"></span>
+        </span>
+        {% endif %}
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+        <!--
+        <span class="post-card__meta__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        -->
+      </div>
+
+      <h2 class="post-card__title">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </div>
+
+  </div>
+</article>

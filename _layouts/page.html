@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+
+  {% if page.image %}
+    <div class="row">
+      <div class="column column--center medium-10 large-10">
+        <div class="bg-white">
+          <div class="grey-bg post-CoverImage FlexEmbed FlexEmbed--1by1" style="background-image: url({{ page.image | prepend: site.baseurl }})"></div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="row">
+    <div class="column column--center medium-10 large-10">
+
+      <article class="post {% unless page.image %} post--no-image {% endunless %}">
+
+        <header class="text-center post__header">
+          <h2 class="post__title">{{ page.title }}</h2>
+        </header>
+
+        <div class="post-content">
+          {{ content }}
+        </div>
+
+      </article>
+    </div>
+
+  </div> <!-- row-->
+</div> <!-- wrapper -->
