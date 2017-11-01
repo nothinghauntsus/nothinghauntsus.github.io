@@ -15,6 +15,10 @@ github_username:
 twitter_username: 
 
 markdown:  kramdown
+
+plugins:
+  - jekyll-paginate
+
 permalink: pretty
 paginate:  24
 sass:
@@ -27,10 +31,10 @@ exclude:
   - vendor
   - Gemfile.lock
 
-# Tags
-tag_page_dir:         tags
-tag_page_layout:      tag_page
-tag_permalink_style:  pretty
+collections:
+  tags:
+    output: true
+    permalink: /tags/:name/
 
 # Pages path
 defaults:
