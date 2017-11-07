@@ -6,11 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title:            Nothing Haunts Us Like the Things We Didn’t Buy
+title:            Wanna shop about it?
 email:            dongjo.ad@gmail.com
 description:      How to shop for define your personal style and the soul
 baseurl:          '' # The subpath of your site, e.g. /blog
-url:              'http://www.nothinghauntsus.com' # The base hostname & protocol for your site
+url:              'http://www.wannashopaboutit.com' # The base hostname & protocol for your site
 github_username:  
 twitter_username: 
 
